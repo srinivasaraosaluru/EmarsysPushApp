@@ -1,0 +1,7 @@
+{
+  "name": "EmarsysPushApplication",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

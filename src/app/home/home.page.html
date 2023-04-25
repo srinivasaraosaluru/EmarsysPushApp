@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Emarsys Push Application
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,33 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Emarsys Push Application</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+
+  <ion-button (click)="requestPermissions()">Request permissions</ion-button>
+
+  <ion-button (click)="addListener()">Register Token</ion-button>
+
+  <ion-button (click)="getToken()">Get Token</ion-button>
+
+
+
+
+
+  <ion-title *ngIf="value">
+    {{ value }}
+  </ion-title>
+
+
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input type="text"  [(ngModel)]="email" ngControl="title"></ion-input>
+    </ion-item>
+    <ion-button (click)="setToken()"> Register Notifications</ion-button>
+
+
+    <ion-button (click)="clearToken()">Clear Token / Logout </ion-button>
+
 </ion-content>
